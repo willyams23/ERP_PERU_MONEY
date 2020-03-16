@@ -16,7 +16,8 @@ namespace WebERP.PeruMoney
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Menu", action = "Inicio", id = UrlParameter.Optional }
+                //defaults: new { controller = "Home", action = "Inicio", id = UrlParameter.Optional }
+                defaults: new { controller = "Login", action = "Inicio", id = UrlParameter.Optional }
             );
         }
     }

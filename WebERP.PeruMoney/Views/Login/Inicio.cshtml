@@ -4,14 +4,69 @@
 }
 
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Inicio</title>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="~/Content_Login/images/icons/favicon.ico" />
+
+    @Styles.Render("~/bundlesLogin/css")
 </head>
 <body>
-    <div> 
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('../Content_Login/images/bg-01.jpg');">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title p-b-49">
+                        Iniciar Sesión
+                    </span>
+
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Se requiere nombre de usuario">
+                        <span class="label-input100">Nombre Usuario</span>
+                        <input class="input100" type="text" name="username" placeholder="Escribe tu nombre de usuario">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Se requiere Contraseña">
+                        <span class="label-input100">Contraseña</span>
+                        <input class="input100" type="password" name="pass" placeholder="Escribe tu Contraseña">
+                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    </div>
+
+                    <div class="text-right p-t-8 p-b-31">
+                        <a href="#">
+                            ¿Se te olvidó tu contraseña?
+                        </a>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <a href="@Url.Action("Inicio","Home")" class="login100-form-btn">
+                                Login
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex-col-c p-t-100">
+                        <span class="txt1 p-b-17">
+                            o Registrate utilizando el siguiente Link.
+                        </span>
+                        <a href="#" class="txt2">
+                            Registrar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    @Scripts.Render("~/bundlesLogin/js")
+
 </body>
 </html>

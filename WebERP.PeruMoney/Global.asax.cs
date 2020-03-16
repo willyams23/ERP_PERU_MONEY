@@ -14,8 +14,8 @@ namespace WebERP.PeruMoney
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleConfig.RegisterLoginBundles(BundleTable.Bundles);
         }
     }
 }

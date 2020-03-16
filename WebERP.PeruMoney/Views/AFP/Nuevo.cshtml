@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">
+    <li class="btn btn-danger btn-circle">
+        <i class="fas fa-save"></i>
+    </li> Agregar AFP
+</h1>
+<p></p>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Ingresar Información</h6>
+    </div>
+    <div class="card-body">
+
+
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="control-label font-weight-bold">AFP</label>
+                    <input type="text" class="form-control" id="txtAFP">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label class="control-label font-weight-bold">Comisión Fija</label>
+                    <input type="text" class="form-control" id="txtComFija">
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label font-weight-bold">Comisión Sobre Flujo</label>
+                    <input type="text" class="form-control" id="txtComSobreF">
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label font-weight-bold">Porcentaje Obligatorio</label>
+                    <input type="text" class="form-control" id="txtTelf">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label class="control-label font-weight-bold">Comisión Mixta Sobre Flujo</label>
+                    <input type="text" class="form-control" id="txtComFija">
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label font-weight-bold">Comisión Mixta Anual</label>
+                    <input type="text" class="form-control" id="txtComSobreF">
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label font-weight-bold">Remuneración Max.</label>
+                    <input type="text" class="form-control" id="txtTelf">
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="control-label font-weight-bold">Prima Seguro</label>
+                    <input type="text" class="form-control" id="txtLatitud">
+                </div>
+            </div>
+
+            <div class="form-group col-md-offset-2">
+                <a class="btn btn-primary shadow-sm" href="@Url.Action("Inicio","AFP")">
+                    <i class="fas fa-undo fa-sm text-white-50"></i> Regresar
+                </a>
+
+                <a class="btn btn-success shadow-sm" href="@Url.Action("Nuevo","AFP")">
+                    <i class="fas fa-save"></i> Grabar
+                </a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
