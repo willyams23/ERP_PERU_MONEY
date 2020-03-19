@@ -1,0 +1,1023 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+}
+
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">« Mantenimiento Empleado »</h1>
+<p></p>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Lista de Empleado</h6>
+    </div>
+    <div class="card-body">
+        <div class="col-sm-12 col-md-9" style="padding-bottom:30px;">
+            <a href="@Url.Action("Nuevo", "Empleado")" class="btn btn-sm btn-primary shadow-sm">
+                <i class="fas fa-clipboard fa-sm "></i> Nuevo Empleado
+            </a>
+        </div>
+        <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist" style="background:#fff3fb;font-weight:bolder">
+            <li class="nav-item">
+                <a class="nav-link active" id="datocola-tab" data-toggle="tab" href="#home" role="tab" aria-controls="DATOS DEL COLABORADOR" aria-selected="true">Dto. del Colaborador</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="datolabo-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="DATOS LABORALES" aria-selected="false">Dto. Laborales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="cuentas-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="CUENTAS" aria-selected="false">Cuentas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="datosoci-tab" data-toggle="tab" href="#social" role="tab" aria-controls="DATOS SOCIALES" aria-selected="false">Dto. Sociales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="datofami-tab" data-toggle="tab" href="#familiar" role="tab" aria-controls="DATOS FAMILIARES" aria-selected="false">Dto. Familiares</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="datoacad-tab" data-toggle="tab" href="#academico" role="tab" aria-controls="DATOS ACADEMICOS" aria-selected="false">Dto. Aacademicos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="regidisc-tab" data-toggle="tab" href="#registro" role="tab" aria-controls="REGISTRO DISCIPLINARIO" aria-selected="false">Rgtro. Disciplinario</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="datocola-tab">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                                       role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">Acciones</th>
+                                            <th>Tipo Doc. Iden.</th>
+                                            <th>N° Doc. Iden.</th>
+                                            <th>Apelli. Paterno</th>
+                                            <th>Apelli. Materno</th>
+                                            <th>Nombres</th>
+                                            <th>Nacionalidad</th>
+                                            <th>Fech. Ingreso</th>
+                                            <th>Sueldo</th>
+                                            <th>Ocupación</th>
+                                            <th>Agencia</th>
+                                            <th>Área</th>
+                                            <th>Fech. Nac</th>
+                                            <th>Género</th>
+                                            <th>Estado Civil</th>
+                                            <th>Asig. Familiar</th>
+                                            <th>Celular</th>
+                                            <th>Tef. Fijo</th>
+                                            <th>Dirección</th>
+                                            <th>Departamento</th>
+                                            <th>Provincia</th>
+                                            <th>Distrito</th>
+                                            <th>Referencia</th>
+                                            <th>Correo Personal</th>
+                                            <th>Correo Corpora.</th>
+                                            <th>Fech. Cese</th>
+                                            <th>Motivo Cese</th>
+                                            <th>Obser. Cese</th>
+                                            <th>Estado</th>
+                                            <th>Facebook</th>
+                                            <th>Linkedin</th>
+                                            <th>Instagram</th>
+                                            <th>Otr. Red. Sociales</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int i = 1; i < 3; i++)
+                                        {
+
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "Empleado")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "Empleado")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "Empleado")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>45871254</td>
+                                                <td>Lima</td>
+                                                <td>Lima</td>
+                                                <td>Surco</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "Agencias")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "Agencias")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "Agencias")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>45871254</td>
+                                                <td>Lima</td>
+                                                <td>Lima</td>
+                                                <td>Surco</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "Agencias")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "Agencias")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "Agencias")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>45871254</td>
+                                                <td>Lima</td>
+                                                <td>Lima</td>
+                                                <td>Surco</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12 col-md-9">
+
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                                <div>
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous">
+                                            <a href="#" class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="paginate_button page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="paginate_button page-item next">
+                                            <a href="#" class="page-link">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="datolabo-tab">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                                       role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">Acciones</th>
+                                            <th>Regimen Laboral</th>
+                                            <th>Tipo Trabaja.</th>
+                                            <th>Tipo Contrato</th>
+                                            <th>Moda. Contrato</th>
+                                            <th>Ini. Contrato</th>
+                                            <th>Term. Contrato</th>
+                                            <th>Ini. Prorroga</th>
+                                            <th>Term. Prorroga</th>
+                                            <th>Escala Salarial</th>
+                                            <th>Categoria</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int i = 1; i < 3; i++)
+                                        {
+
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Prima</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Prima</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Prima</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12 col-md-9">
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-3">
+                                <div>
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous">
+                                            <a href="#" class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="paginate_button page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="paginate_button page-item next">
+                                            <a href="#" class="page-link">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="cuentas-tab">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                                       role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">Acciones</th>
+                                            <th>Banco Cta Sueldo</th>
+                                            <th>N° Cta Sueldo</th>
+                                            <th>Moneda Cta Sueldo</th>
+                                            <th>Banco Cta Cts</th>
+                                            <th>PN° Cta Cts</th>
+                                            <th>Moneda Cta Cts</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int i = 1; i < 3; i++)
+                                        {
+
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Prima</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Habitat</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Integra</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12 col-md-9">
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-3">
+                                <div>
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous">
+                                            <a href="#" class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="paginate_button page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="paginate_button page-item next">
+                                            <a href="#" class="page-link">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="datosoci-tab">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                                       role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">Acciones</th>
+                                            <th>Seguro Social</th>
+                                            <th>Nombre EPS</th>
+                                            <th>Estatus SPP</th>
+                                            <th>Sistema Pensión</th>
+                                            <th>Tipo de Comisión</th>
+                                            <th>CUSPP</th>
+                                            <th>Aportación Activa</th>
+                                            <th>Asegura. Vida Ley</th>
+                                            <th>N° Poliza</th>
+                                            <th>Asegura. SCTR</th>
+                                            <th>N° Poliza Essalud</th>
+                                            <th>N° Poliza Pensión</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int i = 1; i < 3; i++)
+                                        {
+
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Prima</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Habitat</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Integra</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+                                                <td>Prueba</td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12 col-md-9">
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-3">
+                                <div>
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous">
+                                            <a href="#" class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="paginate_button page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="paginate_button page-item next">
+                                            <a href="#" class="page-link">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="familiar" role="tabpanel" aria-labelledby="datofami-tab">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                                       role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">Acciones</th>
+                                            <th>Seguro Social</th>
+                                            <th>Nombre EPS</th>
+                                            <th>Estatus SPP</th>
+                                            <th>Sistema Pensión</th>
+                                            <th>Tipo de Comisión</th>
+                                            <th>CUSPP</th>
+                                            <th>Aportación Activa</th>
+                                            <th>Asegura. Vida Ley</th>
+                                            <th>N° Poliza</th>
+                                            <th>Asegura. SCTR</th>
+                                            <th>N° Poliza Essalud</th>
+                                            <th>N° Poliza Pensión</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int i = 1; i < 3; i++)
+                                        {
+
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Prima</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Habitat</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>AFP Integra</td>
+                                                <td>15.20</td>
+                                                <td>13.10</td>
+                                                <td>23.50</td>
+                                                <td>53.12</td>
+                                                <td>75.20</td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12 col-md-9">
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-3">
+                                <div>
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous">
+                                            <a href="#" class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="paginate_button page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="paginate_button page-item next">
+                                            <a href="#" class="page-link">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="academico" role="tabpanel" aria-labelledby="datoacad-tab">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                                       role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">Acciones</th>
+                                            <th>Nivel Academico</th>
+                                            <th>Entidad Educa.</th>
+                                            <th>Carrera </th>
+                                            <th>Fech. Term. Acade.</th>
+                                            <th>Posgrado</th>
+                                            <th>Especialidad</th>
+                                            <th>Fech. Term. Posg.</th>
+                                            <th>Idioma</th>
+                                            <th>Basico</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int i = 1; i < 3; i++)
+                                        {
+
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>Secundaria Completa</td>
+                                                <td>Catolica</td>
+                                                <td>Administración</td>
+                                                <td>15/03/2020</td>
+                                                <td>N° Tiene</td>
+                                                <td>N° Tiene</td>
+                                                <td>15/03/2020</td>
+                                                <td>Ingles</td>
+                                                <th>Basico</th>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>Tecnico Titulado</td>
+                                                <td>Catolica</td>
+                                                <td>Administración</td>
+                                                <td>15/03/2020</td>
+                                                <td>N° Tiene</td>
+                                                <td>N° Tiene</td>
+                                                <td>15/03/2020</td>
+                                                <td>Ingles</td>
+                                                <th>Intermedio</th>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>Universitario Egresado</td>
+                                                <td>Catolica</td>
+                                                <td>Contabilidad</td>
+                                                <td>15/03/2020</td>
+                                                <td>N° Tiene</td>
+                                                <td>N° Tiene</td>
+                                                <td>15/03/2020</td>
+                                                <td>Ingles</td>
+                                                <th>Avanzado</th>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12 col-md-9">
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-3">
+                                <div>
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous">
+                                            <a href="#" class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="paginate_button page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="paginate_button page-item next">
+                                            <a href="#" class="page-link">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="regidisc-tab">
+                <div class="table-responsive">
+                    <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                                       role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="text-align: center;">Acciones</th>
+                                            <th>Tipo Sanción</th>
+                                            <th>Fech. Sanción</th>
+                                            <th>Motivo</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @for (int i = 1; i < 3; i++)
+                                        {
+
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>Llamada de Atención Verbal</td>
+                                                <td>14/03/2020</td>
+                                                <td>Problemas</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>Llamada de Atención Escrita</td>
+                                                <td>14/03/2020</td>
+                                                <td>Problemas</td>
+
+                                            </tr>
+
+                                            <tr role="row" class="odd">
+                                                <td colspan="3" style="text-align: center;">
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-success">
+                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-info">
+                                                        <span class="glyphicon glyphicon-edit"></span>
+                                                    </a>
+                                                    <a href="@Url.Action("Inicio", "AFP")" class="btn-circle btn-sm btn-danger">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                    </a>
+                                                </td>
+                                                <td>Suspension</td>
+                                                <td>14/03/2020</td>
+                                                <td>Problemas</td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="width:99%;">
+                            <div class="col-sm-12 col-md-9">
+
+                            </div>
+
+                            <div class="col-sm-12 col-md-3">
+                                <div>
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous">
+                                            <a href="#" class="page-link">Anterior</a>
+                                        </li>
+                                        <li class="paginate_button page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="paginate_button page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="paginate_button page-item next">
+                                            <a href="#" class="page-link">Siguiente</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

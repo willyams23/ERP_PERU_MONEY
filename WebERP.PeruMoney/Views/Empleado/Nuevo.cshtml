@@ -1,0 +1,911 @@
+﻿
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">
+    <li class="btn btn-danger btn-circle">
+        <i class="fas fa-save"></i>
+    </li> Agregar Empleado
+</h1>
+<p></p>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Ingresar Información</h6>
+    </div>
+    <div class="card-body">
+
+
+        <form>
+            <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist" style="background:#fff3fb;font-weight:  bolder;">
+                <li class="nav-item">
+                    <a class="nav-link active" id="datocola-tab" data-toggle="tab" href="#home" role="tab" aria-controls="DATOS DEL COLABORADOR" aria-selected="true">Dto. del Colaborador</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="datolabo-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="DATOS LABORALES" aria-selected="false">Dto. Laborales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="cuentas-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="CUENTAS" aria-selected="false">Cuentas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="datosoci-tab" data-toggle="tab" href="#social" role="tab" aria-controls="DATOS SOCIALES" aria-selected="false">Dto. Sociales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="datofami-tab" data-toggle="tab" href="#familiar" role="tab" aria-controls="DATOS FAMILIARES" aria-selected="false">Dto. Familiares</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="datoacad-tab" data-toggle="tab" href="#academico" role="tab" aria-controls="DATOS ACADEMICOS" aria-selected="false">Dto. Aacademicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="regidisc-tab" data-toggle="tab" href="#registro" role="tab" aria-controls="REGISTRO DISCIPLINARIO" aria-selected="false">Rgtro. Disciplinario</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="datocola-tab">
+                    <div class="form-row" style="padding-top:30px;">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Tipo de Documento o de Identidad<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>DNI</option>
+                                <option>C.E.</option>
+                                <option>OTROS</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° TDI<span class="required">*</span>
+                            </label>
+                            <input type="text" class='form-control' type="tel" name="ntdi" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Apellido Paterno<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Apellido Materno<span class="required">*</span>
+                            </label>
+                            <input type="text" class='form-control' name="ntdi" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Nombres<span class="required">*</span>
+                            </label>
+                            <input type="text" class='form-control' name="ntdi" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Nacionalidad<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Perú</option>
+                                <option>Venezuela</option>
+                                <option>Chile</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha Ingreso<span class="required">*</span>
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Sueldo<span class="required">*</span>
+                            </label>
+                            <input type="text" class='form-control' name="ntdi" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Ocupación<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Supervisor</option>
+                                <option>Cajero</option>
+                                <option>Gerente</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Agencias<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>ICA</option>
+                                <option>TRUJILLO</option>
+                                <option>PRO</option>
+                                <option>JOCKEY 1</option>
+                                <option>CHIMBOTE</option>
+                                <option>CIVICO 1</option>
+                                <option>PIURA</option>
+                                <option>CUSCO</option>
+                                <option>TRUJILLO 2</option>
+                                <option>CIVICO 2 MODULO</option>
+                                <option>MEGA 4</option>
+                                <option>MEGA 2 NUEVO</option>
+                                <option>CHICLAYO</option>
+                                <option>OPEN PIURA</option>
+                                <option>EL QUINDE</option>
+                                <option>CALLAO 3</option>
+                                <option>AREQ CENTER</option>
+                                <option>PLZ NORTE</option>
+                                <option>MALL AREQ 2</option>
+                                <option>OPEN LA MARINA</option>
+                                <option>OPEN PUCALLPA</option>
+                                <option>OPEN ATOCONGO</option>
+                                <option>TUMBES</option>
+                                <option>SAN MIGUEL 3</option>
+                                <option>REAL PIURA 2</option>
+                                <option>REAL HUANCAYO</option>
+                                <option>LURIN</option>
+                                <option>REAL TRUJILLO</option>
+                                <option>HIGUERETA</option>
+                                <option>PLAZA NORTE 2 - TERMINAL</option>
+                                <option>VILLA MARIA</option>
+                                <option>R CUSCO 2</option>
+                                <option>JOCKEY 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Área<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Auditoria Interna</option>
+                                <option>Comercial Y Marketing</option>
+                                <option>Contabilidad</option>
+                                <option>Gestion Humana</option>
+                                <option>Gerencia General</option>
+                                <option>Logística</option>
+                                <option>Operaciones</option>
+                                <option>Seguridad</option>
+                                <option>Sistemas</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha de Nacimiento<span class="required">*</span>
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Género<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Estado Civil<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Soltero</option>
+                                <option>Casado</option>
+                                <option>Viudo</option>
+                                <option>Divorciado</option>
+                                <option>Conviviente</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Asignación Familiar<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Celular<span class="required">*</span>
+                            </label>
+                            <input class="form-control" type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Telefono Fijo<span class="required">*</span>
+                            </label>
+                            <input class="form-control" type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Dirección<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtDirecc">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Departamento<span class="required">*</span>
+                            </label>
+                            <select class="form-control">
+                                <option selected>Seleccionar</option>
+                                <option>Santiago de Surco</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Provincia<span class="required">*</span>
+                            </label>
+                            <select class="form-control">
+                                <option selected>Seleccionar</option>
+                                <option>Santiago de Surco</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Distrito<span class="required">*</span>
+                            </label>
+                            <select class="form-control">
+                                <option selected>Seleccionar</option>
+                                <option>Santiago de Surco</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">Referencia</label>
+                            <textarea class="resizable_textarea form-control"></textarea>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Correo Personal<span class="required">*</span>
+                            </label>
+                            <input class="form-control" name="email" class='email' required="required" type="email" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Correo Corporativo<span class="required">*</span>
+                            </label>
+                            <input class="form-control" name="email" class='email' required="required" type="email" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha de Cese
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Motivo de Cese
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Renuncia</option>
+                                <option>Termino de Contrato</option>
+                                <option>Despido</option>
+                                <option>No superación del Periodo de Prueba</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Motivo
+                            </label>
+                            <textarea class="resizable_textarea form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Estado<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Activo</option>
+                                <option>Cesado</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Facebook<span class="required">*</span>
+                            </label>
+                            <input type="text" class='form-control' name="ntdi" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Linkedin<span class="required">*</span>
+                            </label>
+                            <input type="text" class='form-control' name="ntdi" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Intagram<span class="required">*</span>
+                            </label>
+                            <input type="text" class='form-control' name="ntdi" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Otras Redes Sociales
+                            </label>
+                            <input type="text" class='form-control' name="ntdi" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="datolabo-tab">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Regimen Laboral<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>D.L. 728</option>
+                                <option>MOD. FORM.</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Tipo de Trabajador<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Empleado</option>
+                                <option>Practicante Preprofesional</option>
+                                <option>Practicante Profesional</option>
+                                <option>Pensionista</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Tipo de Contrato<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Plazo Indeterminado</option>
+                                <option>Plazo Fijo</option>
+                                <option>Convenio de Practicas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Modalidad de Contrato<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Inicio o Incremento de Actividades</option>
+                                <option>Nesecidad del Mercado</option>
+                                <option>Obra o Servicio Especifico</option>
+                                <option>Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha del Inicio de Contrato<span class="required">*</span>
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha del Termino de Contrato
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha del Inicio de Prorroga
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha del Termino de Prorroga
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Escala Salarial<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Categoria<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Personal de Soporte</option>
+                                <option>Encargados</option>
+                                <option>Gerentes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="cuentas-tab">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Banco Cuenta Sueldo<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>BBVA Banco Continental</option>
+                                <option>Interbank</option>
+                                <option>Scotiabank</option>
+                                <option>Banco Falabella</option>
+                                <option>Banco Ripley</option>
+                                <option>Banco Pichincha</option>
+                                <option>Banco Finaciero</option>
+                                <option>Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° Cuenta Sueldo<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Moneda<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Soles</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Banco Cuenta CTS<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>BBVA Banco Continental</option>
+                                <option>Interbank</option>
+                                <option>Scotiabank</option>
+                                <option>Banco Falabella</option>
+                                <option>Banco Ripley</option>
+                                <option>Banco Pichincha</option>
+                                <option>Banco Finaciero</option>
+                                <option>Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° Cuenta CTS<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Moneda<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Soles</option>
+                                <option>Dolar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="datosoci-tab">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Seguro Social<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Essalud</option>
+                                <option>EPS</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Nombre EPS<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Rimac</option>
+                                <option>Pacifico Seguro</option>
+                                <option>La Positiva</option>
+                                <option>Mapfre</option>
+                                <option>Sanitas</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Estatus SPP<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Afiliado</option>
+                                <option>Pensionistas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Sistema de Pensiones<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>ONP</option>
+                                <option>AFP HABITAT</option>
+                                <option>AFP INTEGRA</option>
+                                <option>AFP PRIMA</option>
+                                <option>AFP PROFUTURO</option>
+                                <option>CAJA MILITAR POLICIAL</option>
+                                <option>otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Tipo de Comisión<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Flujo</option>
+                                <option>Mixta</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                CUSPP<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Aportación Activa<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Aseguradora Vida Ley<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>RIMAC</option>
+                                <option>PACIFICO SEGUROS</option>
+                                <option>LA POSITIVA</option>
+                                <option>MAPFRE</option>
+                                <option>SANITAS</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° de Poliza<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Aseguradora SCTR<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>RIMAC</option>
+                                <option>PACIFICO SEGUROS</option>
+                                <option>LA POSITIVA</option>
+                                <option>MAPFRE</option>
+                                <option>SANITAS</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° de Poliza de Essalud<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° de Poliza de Pensiones<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="familiar" role="tabpanel" aria-labelledby="datofami-tab">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° de DNI de conyuge<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Apellidos y Nombres de Conyuge<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Celular de conyuge<span class="required">*</span>
+                            </label>
+                            <input class="form-control" type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                N° de Hijos<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding:1px;background:black;">
+
+                    </div>
+                    <div class="form-row" style="padding-top:10px;">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Apellidos y Nombres de Hijos<san class="required">*</san>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                DNI de Hijo<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fech. Nac. Hijo<span class="required">*</span>
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Edad<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Género<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <div style="padding-top:30px;">
+                                <a class="btn btn-primary shadow-sm" style="color:white;">
+                                    Agregar Hijo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding:0.5px;background:black;">
+
+                    </div>
+                    <div class="form-row" style="padding-top:10px;">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Apellidos y Nombres de Contacto Emergencia<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Parentesco<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Padre</option>
+                                <option>Madre</option>
+                                <option>Hermano(a)</option>
+                                <option>Abuelo(a)</option>
+                                <option>Tío(a)</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Celular<span class="required">*</span>
+                            </label>
+                            <input class="form-control" type="tel" class='tel' name="phone" required='required' data-validate-length-range="8,20" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                        </div>
+                        <div class="form-group col-md-4">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <a class="btn btn-primary shadow-sm" style="color:white;">
+                                Agregar Contacto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="academico" role="tabpanel" aria-labelledby="datoacad-tab">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Nivel Academico<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Secundaria Completa</option>
+                                <option>Estudiante Tecnico</option>
+                                <option>Tecnico Incompleto</option>
+                                <option>Tecnico Egresado</option>
+                                <option>Tecnico Titulado</option>
+                                <option>Estudiante Universitario</option>
+                                <option>Universitario Incompleto</option>
+                                <option>Universitario Egresado</option>
+                                <option>Universitario Bachiller</option>
+                                <option>Universitario Titulado</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Entidad Edicativa<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Carrera<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha Termino Acdemico<span class="required">*</span>
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Posgrado<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Diploma</option>
+                                <option>Maestria</option>
+                                <option>MBA</option>
+                                <option>PHD</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Especialidad<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha Termino Posgrado<span class="required">*</span>
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Idioma<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" id="txtTelf">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Nivel de Idioma<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Basico</option>
+                                <option>Intermedio</option>
+                                <option>Avanzado</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="regidisc-tab">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Tipo de sanción<span class="required">*</span>
+                            </label>
+                            <select name="transporte" class="form-control" data-validate-length-range="6" data-validate-words="2">
+                                <option>Seleccionar</option>
+                                <option>Llamada de atención verbal</option>
+                                <option>Llamada de atención escrita</option>
+                                <option>Suspencion</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Fecha de Sanción<span class="required">*</span>
+                            </label>
+                            <input class="form-control" class='date' type="date" name="date" required='required'>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label font-weight-bold">
+                                Motivo
+                            </label>
+                            <textarea class="resizable_textarea form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group col-md-offset-2">
+                <a class="btn btn-primary shadow-sm" href="@Url.Action("Inicio","Empleado")">
+                    <i class="fas fa-undo fa-sm text-white-50"></i> Regresar
+                </a>
+
+                <a class="btn btn-success shadow-sm" href="@Url.Action("Nuevo","Empleado")">
+                    <i class="fas fa-save"></i> Grabar
+                </a>
+            </div>
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<AgenciaModel>
+
+@{
+    ViewBag.Title = "Inicio";
+}
+
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">« Mantenimiento Agencias »</h1>
+<p></p>
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Lista de Agencias</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                <div class="row" style="width:99%;">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                               role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Agencia</th>
+                                    <th>Departamento</th>
+                                    <th>Provincia</th>
+                                    <th>Distrito</th>
+                                    <th>Latitud</th>
+                                    <th>Longitud</th>
+                                    <th colspan="3" style="text-align: center;">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr role="row" class="odd">
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Agencia)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Departamento)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Provincia)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Distrito)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Latitud)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Longitud)
+                                        </td>
+                                        <td colspan="3" style="text-align: center;">
+                                            <!--<a href="@Url.Action("Inicio", "Agencia",new {id = Convert.ToInt32(item.IdAgencia) })" class="btn-circle btn-sm btn-success">
+                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                            </a>-->
+                                            <a href="@Url.Action("AgregarEdit", "Agencia",new {id = Convert.ToInt32(item.IdAgencia) })" class="btn-circle btn-sm btn-info" data-toggle="Editar">
+                                                <span class="glyphicon glyphicon-edit"></span>
+                                            </a>
+                                            <a href="@Url.Action("Eliminar", "Agencia",new {id = Convert.ToInt32(item.IdAgencia) })" class="btn-circle btn-sm btn-danger" data-toggle="Eliminar">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row" style="width:99%;">
+                    <div class="col-sm-12 col-md-9">
+                        <a href="@Url.Action("AgregarEdit", "Agencia")" class="btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-clipboard fa-sm "></i> Nueva Agencia
+                        </a>
+                    </div>
+
+                    <div class="col-sm-12 col-md-3">
+                        <div>
+                            <ul class="pagination">
+                                <li class="paginate_button page-item previous">
+                                    <a href="#" class="page-link">Anterior</a>
+                                </li>
+                                <li class="paginate_button page-item active">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="paginate_button page-item">
+                                    <a href="#" class="page-link">3</a>
+                                </li>
+                                <li class="paginate_button page-item next">
+                                    <a href="#" class="page-link">Siguiente</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
